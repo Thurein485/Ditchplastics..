@@ -1,0 +1,93 @@
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            color: #222;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ccc;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            position: sticky;
+            
+        }
+
+        .logo-icon img {
+            height: 40px;
+            width: 40px;
+            margin-left: 20px;
+        }
+
+        #menu-checkbox {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        nav {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                color: #333;
+            }
+
+            nav {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.918);
+                transition: left 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                z-index: 999;
+            }
+
+            nav a {
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+                text-align: left;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #menu-checkbox:checked ~ nav {
+                left: 0;
+            }
+        }
+        .active {
+            background-color: rgba(107, 228, 107, 0.708);
+            padding: 5px 10px;
+        }
