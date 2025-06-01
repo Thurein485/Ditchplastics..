@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reusable Love - Family Power Slogans</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background-color: #e9f5e1;
+        color: #2d4821;
+        }
+        h2 {
+        color: #4CAF50;
+        font-size: 26px;
+        }
+        p {
+        line-height: 1.8;
+        font-size: 18px;
+        }
+        img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+        }
+
+                    /* --- General Styles --- */
+            body {
+                font-family: 'Open Sans', sans-serif; 
+                margin: 0;
+                padding: 0;
+                background-color: #f8f9fa; 
+                color: #343a40; 
+                line-height: 1.7;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 12px 25px;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .button.primary {
+                background-color: #28a745; 
+                color: #fff;
+            }
+
+            .button.primary:hover {
+                background-color: #1e7e34;
+            }
+
+            .button.secondary {
+                background-color: #f8f9fa;
+                border: 1px solid #343a40;
+            }
+
+            .button.secondary:hover {
+                background-color: #e2e6ea;
+            }
+
+            .button.large {
+                padding: 18px 35px;
+                font-size: 1.1em;
+            }
+
+            .button.small {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .learn-more {
+                display: inline-block;
+                margin-top: 15px;
+                color: #007bff;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .learn-more:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+            /* --- Footer --- */
+            footer {
+                background-color: #343a40; 
+                color: #fff; 
+                padding: 50px 0;
+                font-size: 0.9em;
+            }
+
+            footer .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+
+            .footer-links {
+                display: flex; 
+                justify-content: space-between; 
+                width: 100%; 
+                margin-bottom: 20px;
+            }
+
+            .footer-column {
+                flex: 1; 
+                margin-right: 20px;
+            }
+
+            .footer-column:last-child {
+                margin-right: 0; 
+            }
+
+            .footer-links h3 {
+                font-size: 1.1em;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+
+            .footer-links ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer-links li {
+                margin-bottom: 8px;
+            }
+
+            .footer-links li a {
+                color: #fff; 
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-links li a:hover {
+                color: #f8f9fa; 
+            }
+
+            .footer-bottom {
+                padding-top: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1); 
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                font-size: 0.85em; 
+            }
+
+            .footer-bottom p {
+                margin-bottom: 10px; 
+                opacity: 0.8;
+            }
+
+            .social-icons {
+                display: flex; 
+                align-items: center;
+                margin-bottom: 15px; 
+            }
+
+            .header-logo-icon {
+                height: 66px; 
+                width: auto; 
+            }
+
+            .social-icons a {
+                color: #fff; 
+                font-size: 1.3em; 
+                margin-left: 10px;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .social-icons a:first-child {
+                margin-left: 0;
+            }
+
+            .social-icons a:hover {
+                color: #f8f9fa;
+            }
+
+
+            /* --- Newsletter Form in Footer --- */
+            .newsletter-form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .newsletter-form p {
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form input[type="email"] {
+                padding: 10px;
+                border: none;
+                border-radius: 6px;
+                color: #343a40;
+                margin-bottom: 10px; 
+            }
+
+            .newsletter-form button {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .newsletter-form button:hover {
+                background-color: #1e7e34;
+            }
+
+            /* --- Media Queries for Footer --- */
+            @media (max-width: 768px) {
+                .footer-links {
+                    flex-direction: column; 
+                    margin-bottom: 20px;
+                }
+
+                .footer-column {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+
+                .newsletter-form {
+                    flex-direction: column;
+                }
+
+                .footer-bottom {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .social-icons {
+                    margin-bottom: 10px;
+                }
+            }
+
+                /* Hide menu toggle button on larger screens */
+        .menu-toggle {
+            display: none;
+            background: none;
+            font-size: 1.8rem;
+            border: none;
+            cursor: pointer;
+            color: #28a745;
+        }
+
+        /* Small screens (mobile) */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                display: none;
+                padding: 20px 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-icon">
+            <img src="images/Ditch Plastics Logo.png" alt="Logo">
+        </a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle">☰</label>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Swaps.html">Swaps</a>
+            <a href="DIY.html">DIY</a>
+            <a href="SFF.html" class="active">Solutions</a>
+            <a href="Contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>"Together, we carry change."</h2>
+        <p>
+            The "Reusable Love" slogan promotes families carrying reusable bags, bottles, and containers with pride and care. 
+            This action isn’t just about saving money — it’s about showing love for the Earth. When families work together to avoid single-use plastics, 
+            they teach younger generations the power of small habits. Reusable choices build a greener tomorrow.
+        </p>
+        <p>
+            Did you know? Using one reusable bag for a year can prevent over **500 plastic bags** from being used. Now imagine what a whole family can do!
+        </p>
+        <img src="images/bags.jpg" alt="Family holding reusable bags">
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigate</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Swaps.html">Swaps</a></li>
+                        <li><a href="DIY.html">DIY</a></li>
+                        <li><a href="SFF.html">Solutions</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul>
+                        <li><a href="Contact.html">Become a Member</a></li>
+                        <li><a href="Contact.html">Support Us</a></li>
+                        <li><a href="Contact.html">Volunteer</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>References</h3>
+                    <ul>
+                        <li>
+                            <a href="https://edusn-my.sharepoint.com/:w:/g/personal/thureinlinthant_edusnschool_co_uk/ETS0W5hMmRBIurXZJZlIVEkB6QFQmgFOnAe05w6LBRnj1w?e=cmflzr" target="_blank" rel="noopener noreferrer">
+                                Reference Links
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Stay Connected</h3>
+                    <p>Sign up for our newsletter to receive the latest updates and news.</p>
+                    <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="button primary small" id="subscribe-button">Subscribe</button>
+                        <div class="footer-bottom-inline">
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/yourtwitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/yourchannel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/yourinsta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="mailto:ditchingplastic@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                            <p>© 2025 Ditch Plastics. All rights reserved.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function handleSubscribe(event) {
+            event.preventDefault(); // Stop form from reloading the page
+            const button = document.getElementById('subscribe-button');
+            button.textContent = 'Thank You!';
+            button.disabled = true;
+        }
+    </script>
+</body>
+</html>
