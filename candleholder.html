@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candle Holder</title>
+  <link rel="stylesheet" href="candleholder.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-icon">
+            <img src="images/Ditch Plastics Logo.png" alt="Logo">
+        </a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle">&#9776;</label>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Swaps.html">Swaps</a>
+            <a href="DIY.html" class="active">DIY</a>
+            <a href="SFF.html">Solutions</a>
+            <a href="Contact.html">Contact Us</a>
+        </nav>
+    </header>
+  <div class="container">
+    <h1>Candle Holder</h1>
+    <div class="tutorial">
+      <div class="image-box">
+        <img src="images/Glass Candle Holder.jpg" alt="DIY Candle Holder">
+      </div>
+      <div class="steps-box">
+        <p>Upcycle small glass jars into beautiful candle holders for your room.</p>
+        <h2>Steps:</h2>
+        <ol>
+          <li>Find a clean glass jar (small ones work best).</li>
+          <li>Decorate the outside with paint, lace, or ribbons.</li>
+          <li>Place a small candle or LED tealight inside.</li>
+          <li>Add sand, pebbles, or dried flowers for extra style.</li>
+          <li>Light it up and enjoy the cozy glow!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Navigate</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Swaps.html">Swaps</a></li>
+                    <li><a href="DIY.html">DIY</a></li>
+                    <li><a href="SFF.html">Solutions</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><a href="Contact.html">Become a Member</a></li>
+                    <li><a href="Contact.html">Support Us</a></li>
+                    <li><a href="Contact.html">Volunteer</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+                        <div class="footer-column">
+  <h3>References</h3>
+  <ul>
+    <li>
+      <a href="https://edusn-my.sharepoint.com/:w:/g/personal/thureinlinthant_edusnschool_co_uk/ETS0W5hMmRBIurXZJZlIVEkB6QFQmgFOnAe05w6LBRnj1w?e=cmflzr" target="_blank" rel="noopener noreferrer">
+        Reference Links
+      </a>
+    </li>
+  </ul>
+</div>
+            <div class="footer-column">
+                <h3>Stay Connected</h3>
+                <p>Sign up for our newsletter to receive the latest updates and news.</p>
+                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="button primary small" id="subscribe-button">Subscribe</button>
+                    <div class="footer-bottom-inline">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/yourtwitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/yourchannel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/yourinsta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:ditchingplastic@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <p>© 2025 Ditch Plastics. All rights reserved.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+        <script>
+    function handleSubscribe(event) {
+        event.preventDefault(); // Stop form from reloading the page
+        const button = document.getElementById('subscribe-button');
+        button.textContent = 'Thank You!';
+        button.disabled = true;
+    }
+        function toggleMenu() {
+        const navList = document.querySelector("nav ul");
+        navList.classList.toggle("active");
+    }
+    </script>
+</body>
+</html>
