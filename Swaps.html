@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ditch Plastics | Swaps Main</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Open Sans', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; 
+            color: #343a40; 
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button.primary {
+            background-color: #28a745; 
+            color: #fff;
+        }
+
+        .button.primary:hover {
+            background-color: #1e7e34;
+        }
+
+        .button.secondary {
+            background-color: #f8f9fa;
+            border: 1px solid #343a40;
+        }
+
+        .button.secondary:hover {
+            background-color: #e2e6ea;
+        }
+
+        .button.large {
+            padding: 18px 35px;
+            font-size: 1.1em;
+        }
+
+        .button.small {
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }   
+
+    h2 {
+        text-align: center;
+        color: #2a7a2a;
+        margin-bottom: 40px;
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .solution-item {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .solution-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .solution-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        }
+
+    .solution-item h3 {
+        font-size: 1.5rem;
+        margin: 0 0 12px;
+        color: #2a7a2a;
+    }
+
+    .solution-item p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #555;
+        flex-grow: 1;
+    }
+
+    .learn-more {
+        margin-top: 20px;
+        padding: 10px 22px;
+        background-color: #2a7a2a;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .learn-more:hover {
+        -color: #1f561f;
+    }
+
+    /* Responsive tweak for smaller screens */
+    @media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+
+    .solution-item img {
+        height: 140px;
+    }
+    }
+
+                /* --- General Styles --- */
+        body {
+            font-family: 'Open Sans', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; 
+            color: #343a40; 
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button.primary {
+            background-color: #28a745; 
+            color: #fff;
+        }
+
+        .button.primary:hover {
+            background-color: #1e7e34;
+        }
+
+        .button.secondary {
+            background-color: #f8f9fa;
+            border: 1px solid #343a40;
+        }
+
+        .button.secondary:hover {
+            background-color: #e2e6ea;
+        }
+
+        .button.large {
+            padding: 18px 35px;
+            font-size: 1.1em;
+        }
+
+        .button.small {
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        /* --- Footer --- */
+        footer {
+            background-color: #343a40; 
+            color: #fff; 
+            padding: 50px 0;
+            font-size: 0.9em;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-links {
+            display: flex; 
+            justify-content: space-between; 
+            width: 100%; 
+            margin-bottom: 20px;
+        }
+
+        .footer-column {
+            flex: 1; 
+            margin-right: 20px;
+        }
+
+        .footer-column:last-child {
+            margin-right: 0; 
+        }
+
+        .footer-links h3 {
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links li a {
+            color: #fff; 
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links li a:hover {
+            color: #f8f9fa; 
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 0.85em; 
+        }
+
+        .footer-bottom p {
+            margin-bottom: 10px; 
+            opacity: 0.8;
+        }
+
+        .social-icons {
+            display: flex; 
+            align-items: center;
+            margin-bottom: 15px; 
+        }
+
+        .social-icons a {
+            color: #fff; 
+            font-size: 1.3em; 
+            margin-left: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:first-child {
+            margin-left: 0;
+        }
+
+        .social-icons a:hover {
+            color: #f8f9fa;
+        }
+
+
+        /* --- Newsletter Form in Footer --- */
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .newsletter-form p {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-form input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            color: #343a40;
+            margin-bottom: 10px; 
+        }
+
+        .newsletter-form button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #1e7e34;
+        }
+
+        /* --- Media Queries for Footer --- */
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column; 
+                margin-bottom: 20px;
+            }
+
+            .footer-column {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .social-icons {
+                margin-bottom: 10px;
+            }
+        }
+
+            /* Hide menu toggle button on larger screens */
+    .menu-toggle {
+        display: none;
+        background: none;
+        font-size: 1.8rem;
+        border: none;
+        cursor: pointer;
+        color: #28a745;
+    }
+
+    /* Small screens (mobile) */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            display: none;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav li {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-icon">
+            <img src="images/Ditch Plastics Logo.png" alt="Logo">
+        </a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle">&#9776;</label>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Swaps.html" class="active">Swaps</a>
+            <a href="DIY.html">DIY</a>
+            <a href="SFF.html">Solutions</a>
+            <a href="Contact.html">Contact Us</a>
+        </nav>
+    </header>
+    
+    <section class="solutions">
+    <div class="container">
+        <h2>Solutions to Plastic Pollution</h2>
+
+        <div class="solutions-grid">
+
+        <div class="solution-item">
+            <img src="images/Reusable Shopping Bags.jpg" alt="Reusable bags" />
+            <h3>Reusable Bags</h3>
+            <p>Switch from single-use plastic bags to reusable cloth bags to reduce plastic waste.</p>
+            <a href="Swaps_1.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Bamboo Toothbrushes.png" alt="Tooth Brush" />
+            <h3>Thooth Brush</h3>
+            <p>Use metal or bamboo tooth brushes instead of plastic ones to reduce pollution.</p>
+            <a href="Swaps_2.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Reusable Water Bottles.jpg" alt="Reusable Water Bottles" />
+            <h3>Reusable Water Bottles</h3>
+            <p>Carry reusable water bottles instead of buying single-use plastic bottles.</p>
+            <a href="Swaps_3.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Beeswax Wraps.jpg" alt="Beeswax Wraps" />
+            <h3>Beeswax Wraps</h3>
+            <p>Choose products with Bee Wrapes or no plastic packaging.</p>
+            <a href="Swaps_4.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Shampoo Bars.jpg" alt="Shampoo Bars" />
+            <h3>Shampoo Bars</h3>
+            <p>Replace shampoo liquid with compostable alternatives made from plant materials shampoo bars.</p>
+            <a href="Swaps_5.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Compostable Cutlery.jpg" alt="Compostable Cutlery" />
+            <h3>Compostable Cutlery</h3>
+            <p>Replace plastic cutlery with compostable alternatives made from plant materials.</p>
+            <a href="Swaps_6.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Reusable Food Containers.jpg" alt="Reusable Food Containers" />
+            <h3>Reusable Food Containers</h3>
+            <p>Reusable foodware and packaging are repeatedly used for the same purpose for which they were originally created</p>
+            <a href="Swaps_7.html" class="learn-more">Learn More</a>
+        </div>
+
+        <div class="solution-item">
+            <img src="images/Natural Sponges" alt="Natural Sponges" />
+            <h3>Natural Sponges</h3>
+            <p>Natural spongesare wetlands that capture water at an early stage and delay the runoff.</p>
+            <a href="Swaps_8.html" class="learn-more">Learn More</a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Navigate</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Swaps.html">Swaps</a></li>
+                    <li><a href="DIY.html">DIY</a></li>
+                    <li><a href="SFF.html">Solutions</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><a href="Contact.html">Become a Member</a></li>
+                    <li><a href="Contact.html">Support Us</a></li>
+                    <li><a href="Contact.html">Volunteer</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+                        <div class="footer-column">
+  <h3>References</h3>
+  <ul>
+    <li>
+      <a href="https://edusn-my.sharepoint.com/:w:/g/personal/thureinlinthant_edusnschool_co_uk/ETS0W5hMmRBIurXZJZlIVEkB6QFQmgFOnAe05w6LBRnj1w?e=cmflzr" target="_blank" rel="noopener noreferrer">
+        Reference Links
+      </a>
+    </li>
+  </ul>
+</div>
+            <div class="footer-column">
+                <h3>Stay Connected</h3>
+                <p>Sign up for our newsletter to receive the latest updates and news.</p>
+                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="button primary small" id="subscribe-button">Subscribe</button>
+                    <div class="footer-bottom-inline">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/yourtwitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/yourchannel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/yourinsta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:ditchingplastic@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <p>© 2025 Ditch Plastics. All rights reserved.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    function handleSubscribe(event) {
+        event.preventDefault(); // Stop form from reloading the page
+        const button = document.getElementById('subscribe-button');
+        button.textContent = 'Thank You!';
+        button.disabled = true;
+    }
+    function toggleMenu() {
+        const navList = document.querySelector("nav ul");
+        navList.classList.toggle("active");
+    }
+    </script>
+</body>
+</html>
