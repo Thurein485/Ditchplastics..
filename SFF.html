@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ditch Plastics - Solutions</title>
+        <link rel="stylesheet" href="nav.css">
+    <style>/* --- Reset and Base Styles --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+/* --- Buttons --- */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button.primary {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background-color: #1e7e34;
+}
+
+.button.secondary {
+    background-color: #f8f9fa;
+    border: 1px solid #343a40;
+}
+
+.button.secondary:hover {
+    background-color: #e2e6ea;
+}
+
+.button.large {
+    padding: 18px 35px;
+    font-size: 1.1em;
+}
+
+.button.small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- Info Section --- */
+.section-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2e8b57;
+}
+
+.info-row {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-text {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.info-photo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.info-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Box Container --- */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box h3 {
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.read-more {
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* REMOVE UNDERLINE */
+}
+
+.read-more:hover {
+    background-color: #246b44;
+}
+
+/* --- Accordion --- */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.accordion-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e8b57;
+    background-color: #eafaf1;
+}
+
+.accordion-body {
+    display: none;
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+
+/* --- Newsletter --- */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.newsletter-form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Navigation Responsive --- */
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        display: none;
+        padding: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+    * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background-color: #f0fdf4;
+        color: #333;
+        }
+
+        section {
+        padding: 40px 20px;
+        }
+
+        .section-title {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #2e8b57;
+        }
+
+        .info-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 25px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .info-text {
+        flex: 1;
+        min-width: 250px;
+        margin-right: 20px;
+        }
+
+        .info-photo {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 10px;
+        }
+
+        .info-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        }
+
+        .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        }
+
+        .box {
+        background-color: white;
+        width: 220px;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+        }
+
+        .box:hover {
+        transform: scale(1.05);
+        }
+
+        .box h3 {
+        color: #2e8b57;
+        margin-bottom: 10px;
+        }
+
+        .slogan {
+        font-style: italic;
+        margin-bottom: 15px;
+        color: #444;
+        }
+
+        .read-more {
+        background-color: #2e8b57;
+        color: white;
+        border: none;
+        padding: 10px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none; /* REMOVE UNDERLINE */
+        }
+
+        .read-more:hover {
+        background-color: #246b44;
+        }
+
+        .accordion {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        }
+
+        .accordion-item {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin-bottom: 12px;
+        overflow: hidden;
+        }
+
+        .accordion-header {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: #2e8b57;
+        font-weight: bold;
+        background-color: #eafaf1;
+        }
+
+        .accordion-body {
+        display: none;
+        padding: 15px 20px;
+        background-color: #f5f5f5;
+        }
+
+        .arrow {
+        font-size: 18px;
+        }
+            /* --- General Styles --- */
+            body {
+                font-family: 'Open Sans', sans-serif; 
+                margin: 0;
+                padding: 0;
+                background-color: #f8f9fa; 
+                color: #343a40; 
+                line-height: 1.7;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 12px 25px;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .button.primary {
+                background-color: #28a745; 
+                color: #fff;
+            }
+
+            .button.primary:hover {
+                background-color: #1e7e34;
+            }
+
+            .button.secondary {
+                background-color: #f8f9fa;
+                border: 1px solid #343a40;
+            }
+
+            .button.secondary:hover {
+                background-color: #e2e6ea;
+            }
+
+            .button.large {
+                padding: 18px 35px;
+                font-size: 1.1em;
+            }
+
+            .button.small {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .learn-more {
+                display: inline-block;
+                margin-top: 15px;
+                color: #007bff;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .learn-more:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+            /* --- Footer --- */
+            footer {
+                background-color: #343a40; 
+                color: #fff; 
+                padding: 50px 0;
+                font-size: 0.9em;
+            }
+
+            footer .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+
+            .footer-links {
+                display: flex; 
+                justify-content: space-between; 
+                width: 100%; 
+                margin-bottom: 20px;
+            }
+
+            .footer-column {
+                flex: 1; 
+                margin-right: 20px;
+            }
+
+            .footer-column:last-child {
+                margin-right: 0; 
+            }
+
+            .footer-links h3 {
+                font-size: 1.1em;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+
+            .footer-links ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer-links li {
+                margin-bottom: 8px;
+            }
+
+            .footer-links li a {
+                color: #fff; 
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-links li a:hover {
+                color: #f8f9fa; 
+            }
+
+            .footer-bottom {
+                padding-top: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1); 
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                font-size: 0.85em; 
+            }
+
+            .footer-bottom p {
+                margin-bottom: 10px; 
+                opacity: 0.8;
+            }
+
+            .social-icons {
+                display: flex; 
+                align-items: center;
+                margin-bottom: 15px; 
+            }
+
+            .header-logo-icon {
+                height: 66px; 
+                width: auto; 
+            }
+
+
+            .social-icons a {
+                color: #fff; 
+                font-size: 1.3em; 
+                margin-left: 10px;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .social-icons a:first-child {
+                margin-left: 0;
+            }
+
+            .social-icons a:hover {
+                color: #f8f9fa;
+            }
+
+
+            /* --- Newsletter Form in Footer --- */
+            .newsletter-form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .newsletter-form p {
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form input[type="email"] {
+                padding: 10px;
+                border: none;
+                border-radius: 6px;
+                color: #343a40;
+                margin-bottom: 10px; 
+            }
+
+            .newsletter-form button {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .newsletter-form button:hover {
+                background-color: #1e7e34;
+            }
+
+            /* --- Media Queries for Footer --- */
+            @media (max-width: 768px) {
+                .footer-links {
+                    flex-direction: column; 
+                    margin-bottom: 20px;
+                }
+
+                .footer-column {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+
+                .newsletter-form {
+                    flex-direction: column;
+                }
+
+                .footer-bottom {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .social-icons {
+                    margin-bottom: 10px;
+                }
+            }
+
+                /* Hide menu toggle button on larger screens */
+            .menu-toggle {
+                display: none;
+                background: none;
+                font-size: 1.8rem;
+                border: none;
+                cursor: pointer;
+                color: #28a745;
+            }
+
+            /* Small screens (mobile) */
+            @media (max-width: 768px) {
+                nav ul {
+                    flex-direction: column;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    background-color: white;
+                    display: none;
+                    padding: 20px 0;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                }
+
+                nav ul.active {
+                    display: flex;
+                }
+
+                nav li {
+                    margin: 10px 0;
+                    text-align: center;
+                }
+
+                .menu-toggle {
+                    display: block;
+                }
+            }
+</style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-icon">
+            <img src="images/Ditch Plastics Logo.png" alt="Logo">
+        </a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle">☰</label>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Swaps.html">Swaps</a>
+            <a href="DIY.html">DIY</a>
+            <a href="SFF.html" class="active">Solutions</a>
+            <a href="Contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section>
+    <div class="section-title">Simple Family Solutions to Ditch Plastics</div>
+
+    <div class="info-row">
+        <div class="info-text">
+        <h3>1. How can families reduce single-use plastics?</h3>
+        <p>Families can switch to reusable shopping bags, bottles, and containers.</p>
+        </div>
+        <div class="info-photo"><img src="images/Grenn recycled.jpg" alt="Reusable items"></div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-text">
+        <h3>2. What alternatives are good for plastic wrap?</h3>
+        <p>Beeswax wraps and glass containers work great for leftovers.</p>
+        </div>
+        <div class="info-photo"><img src="images/green earth.jpg" alt="Eco wrap options"></div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-text">
+        <h3>3. Can kids help with plastic reduction?</h3>
+        <p>Yes! Teach kids to bring their own bottle and avoid plastic toys.</p>
+        </div>
+        <div class="info-photo"><img src="images/download.jpg" alt="Kids helping planet"></div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-text">
+        <h3>4. How to store food without plastic?</h3>
+        <p>Use glass jars, metal boxes, and fabric covers instead of plastic.</p>
+        </div>
+        <div class="info-photo"><img src="images/bottles.jpg" alt="Food storage alternatives"></div>
+    </div>
+
+    <div class="info-row"> 
+        <div class="info-text">
+        <h3>5. What’s a simple daily habit to ditch plastic?</h3>
+        <p>Carry your own reusable bottle and cutlery set every day.</p>
+        </div>
+        <div class="info-photo"><img src="images/bags.jpg" alt="Reusable bags"></div>
+    </div>
+    </section>
+
+    <section>
+    <div class="section-title">Family Power Slogans</div>
+    <div class="box-container">
+        <div class="box">
+        <h3>Reusable Love</h3>
+        <p class="slogan">"Together, we carry change."</p>
+        <a href="reusable-love.html" class="read-more">Read More</a>
+        </div>
+        <div class="box">
+        <h3>Plastic-Free Lunch</h3>
+        <p class="slogan">"Eat clean, live green."</p>
+        <a href="plastic-free-lunch.html" class="read-more">Read More</a>
+        </div>
+        <div class="box">
+        <h3>Green Family Goals</h3>
+        <p class="slogan">"One choice, big impact."</p>
+        <a href="green-family-goals.html" class="read-more">Read More</a>
+        </div>
+        <div class="box">
+        <h3>Bye Bye Bottles</h3>
+        <p class="slogan">"Refill and repeat."</p>
+        <a href="bye-bye-bottles.html" class="read-more">Read More</a>
+        </div>
+        <div class="box">
+        <h3>Little Hands, Big Change</h3>
+        <p class="slogan">"Kids against plastic."</p>
+        <a href="little-hands.html" class="read-more">Read More</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">Your Question Are Already Answered</div>
+    <div class="accordion">
+        <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            Why is ditching plastic important for families? <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">Plastic harms health and nature. Families can lead the way to a cleaner planet.</div>
+        </div>
+
+        <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            Are plastic-free items expensive? <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">Some cost more at first, but they save money over time and are better for Earth.</div>
+        </div>
+
+        <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            Can we find these items in local shops? <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">Yes! Many local stores sell eco-friendly options now, especially markets.</div>
+        </div>
+
+        <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            What if family members forget their reusables? <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">Keep spares in the car or bag. Make it a family habit together.</div>
+        </div>
+
+        <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            How do I teach my kids about plastic pollution? <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">Use simple videos and let them help with eco-choices at home.</div>
+        </div>
+    </div>
+</section>
+        <script>
+            function toggleAccordion(header) {
+            const body = header.nextElementSibling;
+            const isOpen = body.style.display === "block";
+            body.style.display = isOpen ? "none" : "block";
+            header.querySelector(".arrow").textContent = isOpen ? "▼" : "▲";
+            }
+</script>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Navigate</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Swaps.html">Swaps</a></li>
+                    <li><a href="DIY.html">DIY</a></li>
+                    <li><a href="SFF.html">Solutions</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><a href="Contact.html">Become a Member</a></li>
+                    <li><a href="Contact.html">Support Us</a></li>
+                    <li><a href="Contact.html">Volunteer</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+                        <div class="footer-column">
+    <h3>References</h3>
+    <ul>
+      <li>
+        <a href="https://edusn-my.sharepoint.com/:w:/g/personal/thureinlinthant_edusnschool_co_uk/ETS0W5hMmRBIurXZJZlIVEkB6QFQmgFOnAe05w6LBRnj1w?e=cmflzr" target="_blank" rel="noopener noreferrer">
+          Reference Links
+        </a>
+      </li>
+    </ul>
+</div>
+            <div class="footer-column">
+                <h3>Stay Connected</h3>
+                <p>Sign up for our newsletter to receive the latest updates and news.</p>
+                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="button primary small" id="subscribe-button">Subscribe</button>
+                    <div class="footer-bottom-inline">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/yourtwitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/yourchannel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/yourinsta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:ditchingplastic@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <p>© 2025 Ditch Plastics. All rights reserved.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+        <script>
+    function handleSubscribe(event) {
+        event.preventDefault(); // Stop form from reloading the page
+        const button = document.getElementById('subscribe-button');
+        button.textContent = 'Thank You!';
+        button.disabled = true;
+    }
+        function toggleMenu() {
+        const navList = document.querySelector("nav ul");
+        navList.classList.toggle("active");
+    }
+    </script>
+    <script>
+</script>
+</body>
+</html>
